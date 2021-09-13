@@ -1,3 +1,4 @@
+from time import process_time
 from typing import no_type_check
 from binance.client import Client
 from binance.helpers import round_step_size
@@ -49,6 +50,8 @@ def analysis():
     df = get_data.main(symbol_list)
     to_buy = []
     to_sell = []
+    rsi_test = []
+    rsi_test_al  =[]
     for coin in symbol_list:
         tmp_df = df[df["symbol"] == coin]
         tmp_df = tmp_df.reset_index()
@@ -83,11 +86,20 @@ def analysis():
             to_buy.append(coin)
         if ((close >= MA_7) & (close <= MA_25) & (close <= MA_99) & (close >= EMA_7) & (close <= EMA_25) & (close <= EMA_99) & ((RSI_6 >= 0.8) | (RSI_12 >= 0.8))):
             to_sell.append(coin)
+        if (RSI_6 >= 0.65) | (RSI_12 >= 0.65):
+            rsi_test.append(coin)
+        if (RSI_6 <= 0.35) | (RSI_12 <= 0.35):
+            rsi_test_al.append(coin)
+
 
     print('Alınacaklar: ')
     print(to_buy)
     print('Satılacaklar: ')
     print(to_sell)
+    print('Test List - sell')
+    print(rsi_test)
+    print('Test List - buy')
+    print(rsi_test_al)
 
 analysis() 
 
