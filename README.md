@@ -4,6 +4,10 @@
 
 And decide which coins you should sell or buy. ⬅
 
+-------------------------------------
+## How to use?
+After filling api_keys.txt and symbol_list.txt files just run the main_calculation.py :)
+
 ---------------------------------------
 ## The Libs:
 
