@@ -1,6 +1,7 @@
 from binance.client import Client
 import pandas as pd
 import numpy as np
+import os
 
 def coin_list():
     with open('symbol_list.txt') as f:
@@ -10,12 +11,8 @@ def coin_list():
     return symbol_list
 
 def main(symbol_list):
-    with open("api_keys.txt") as f:
-        keys = f.readlines()
-
-    api_key = keys[0].replace("\n","")
-    secret_key = keys[1].replace("\n","")
-
+    api_key = os.getenv("API_KEY")
+    secret_key = os.getenv("SECRET_KEY")
     client = Client(api_key, secret_key)
 
 
