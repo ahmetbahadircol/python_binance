@@ -144,17 +144,17 @@ def analysis():
         if (close < EMA_100) & (MACD_12_26 < MACDsignal):
             m_to_sell.append(coin)
 
-    print('MACDye(' + tmp_df.columns[15] + ') göre ALINACAKLAR ve Fibonacci değerleri:\n')
+    print('The coins to BUY according to (' + tmp_df.columns[15] + ') and their Fibonacci values:\n')
     fibo(df,m_to_buy)
     print('-' * 100)
-    print('MACDye(' + tmp_df.columns[15] + ') göre SATILACAKLAR ve Fibonacci değerleri:\n')
+    print('The coins to SELL according to (' + tmp_df.columns[15] + ') and their Fibonacci values:\n')
     fibo(df,m_to_sell)
     print('-' * 100)
-    print('RSIya göre ALINACAKLAR ve RSI değerleri(' + tmp_df.columns[13] + ' ve ' + tmp_df.columns[14] + '):\n')
+    print('The coins to BUY according to (' + tmp_df.columns[13] + ' and ' + tmp_df.columns[14] + ') and their RSI values:\n')
     for coin in RSI_to_buy:
         print(coin , [round(x,5) for x in RSI_to_buy[coin]])
     print('-' * 100) 
-    print('RSIya göre SATILACAKLAR ve RSI değerleri(' + tmp_df.columns[13] + ' ve ' + tmp_df.columns[14] + '):\n')
+    print('The coins to SELL according to (' + tmp_df.columns[13] + ' and ' + tmp_df.columns[14] + ') and their RSI values:\n')
     for coin in RSI_to_sell:
         print(coin , [round(x,5) for x in RSI_to_sell[coin]])       
 
