@@ -1,12 +1,12 @@
 # Python Binance App
 ---------------------------------------------
-💸 Simply calculate the Moving Avrage (7,25,99), Exponential Moving Avrage (7,25,99) and Relative Strength Index (6,12,24) of any coin on Binance. 💸
+💸 Simply calculate the Moving Avrage (7,25,99), Exponential Moving Avrage (7,25,99), Relative Strength Index (6,12,24), MACD(12,26) with signal and Fibonacci values of each coin that satisfy the MACD consratints on Binance. 💸
 
 And decide which coins you should sell or buy. ⬅
 
 -------------------------------------
 ## How to use?
-After filling api_keys.txt and symbol_list.txt files just run the main_calculation.py :)
+After filling symbol_list.txt and creating the env variables API_KEY and SECRET_KEY files just run the main_calculation.py :)
 
 ---------------------------------------
 ## The Libs:
