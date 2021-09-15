@@ -64,14 +64,19 @@ def fibo(df,l):
         fibb_list = {}
         max_c = selected['close'].max()
         min_c = selected['close'].min()
+        f1 = round((max_c - ((max_c - min_c) * 0.786)),5)
+        f2 = round((max_c - ((max_c - min_c) * 0.618)),5)
+        f3 = round((max_c - ((max_c - min_c) * 0.500)),5)
+        f4 = round((max_c - ((max_c - min_c) * 0.382)),5)
+        f5 = round((max_c - ((max_c - min_c) * 0.236)),5)
         print(coin + '[Close: ' + str(close) + '] - [Fibo: ' 
-             + str((max_c - min_c) * 0) 
-             + ' , ' + str(round(((max_c - min_c) * 0.236),5)) 
-             + ' , ' + str(round(((max_c - min_c) * 0.382),5)) 
-             + ' , ' + str(round(((max_c - min_c) * 0.500),5)) 
-             + ' , ' + str(round(((max_c - min_c) * 0.618),5))
-             + ' , ' + str(round(((max_c - min_c) * 0.786),5))
-             + ' , ' + str(round(((max_c - min_c) * 1.000),5))
+             + str(min_c) 
+             + ' , ' + str(f1) 
+             + ' , ' + str(f2) 
+             + ' , ' + str(f3) 
+             + ' , ' + str(f4)
+             + ' , ' + str(f5)
+             + ' , ' + str(max_c)
              + ']'
             )
 def analysis():
